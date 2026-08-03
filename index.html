@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Length Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-box">
+      <i class="fa-solid fa-ruler-combined logo"></i>
+      <div>
+        <h1>Luxury Length Converter</h1>
+        <p>ระบบแปลงหน่วยวัดความยาวสำหรับช่างและวิศวกร</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="card">
+
+      <h2><i class="fa-solid fa-arrows-left-right"></i> แปลงหน่วยความยาว</h2>
+
+      <label>ค่าที่ต้องการแปลง</label>
+      <input type="number" id="inputValue" placeholder="กรอกตัวเลข" />
+
+      <div class="select-group">
+        <div>
+          <label>หน่วยต้นทาง</label>
+          <select id="fromUnit">
+            <option value="mm">Millimeter (mm)</option>
+            <option value="cm">Centimeter (cm)</option>
+            <option value="m" selected>Meter (m)</option>
+            <option value="km">Kilometer (km)</option>
+            <option value="in">Inch (in)</option>
+            <option value="ft">Foot (ft)</option>
+            <option value="yd">Yard (yd)</option>
+            <option value="mi">Mile (mi)</option>
+          </select>
+        </div>
+
+        <div class="swap-box">
+          <button id="swapBtn" title="สลับหน่วย">
+            <i class="fa-solid fa-right-left"></i>
+          </button>
+        </div>
+
+        <div>
+          <label>หน่วยปลายทาง</label>
+          <select id="toUnit">
+            <option value="mm">Millimeter (mm)</option>
+            <option value="cm">Centimeter (cm)</option>
+            <option value="m">Meter (m)</option>
+            <option value="km" selected>Kilometer (km)</option>
+            <option value="in">Inch (in)</option>
+            <option value="ft">Foot (ft)</option>
+            <option value="yd">Yard (yd)</option>
+            <option value="mi">Mile (mi)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="convert-btn" onclick="convertLength()">
+        <i class="fa-solid fa-calculator"></i> แปลงหน่วย
+      </button>
+
+      <div class="result-box" id="result">
+        ผลลัพธ์จะแสดงที่นี่
+      </div>
+
+      <div class="info">
+        <i class="fa-solid fa-circle-info"></i>
+        รองรับทั้งระบบเมตริกและระบบอังกฤษ ใช้งานได้บนมือถือ แท็บเล็ต และคอมพิวเตอร์
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 วิทยาลัยเทคนิคสว่างแดนดิน | แผนกเทคโนโลยีสารสนเทศ</p>
+    <p>พัฒนาโดย นางสาวชฎาพร สุมามาร</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
